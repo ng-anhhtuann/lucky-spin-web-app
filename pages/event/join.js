@@ -36,6 +36,11 @@ export default function Info() {
   // Get current event from previous state get in
   const currEvent = usePlayerEventHook();
 
+  useEffect(() => {
+    if (currEvent.eventId === null || currEvent.eventId === undefined) {
+      router.push("/");
+    }
+  })
   const onJoinClick = useCallback(() => {
     if (isEmpty(name) || name.replaceAll(" ", "") === "") {
       ShowMethod(dispatch, messagesError.E0004, false)
@@ -56,7 +61,7 @@ export default function Info() {
         ShowMethod(dispatch, messagesSuccess.I0009, true)
         setPlayer(newParticipant)
         setTimeout(() => {
-          router.push("/event/countdown-checkin");
+          router.push("/admin/event/countdown-checkin");
         }, 2000);
       })
       .catch((e) => {
@@ -106,11 +111,11 @@ export default function Info() {
   const renderButton = useMemo(() => {
     return (
       <div className="w-full mb-4">
-        <Button 
-          content="Tham gia" 
-          onClick={onJoinClick} 
-          primaryColor={LEFT_COLOR} 
-          secondaryColor={RIGHT_COLOR} 
+        <Button
+          content="Tham gia"
+          onClick={onJoinClick}
+          primaryColor={LEFT_COLOR}
+          secondaryColor={RIGHT_COLOR}
         />
       </div>
     )
