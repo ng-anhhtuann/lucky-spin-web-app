@@ -302,7 +302,7 @@ export default function Register() {
 
   const renderSecondLine = useMemo(() => {
     return (
-      <Line marginY={false}/>
+      <Line/>
     )
   }, [])
 
