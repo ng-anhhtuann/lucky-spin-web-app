@@ -6,28 +6,33 @@ module.exports = withImages({
     return config;
   },
   // comment below when building on localhost
-  
-  // trailingSlash: true,
-  // exportTrailingSlash: true,
-  // exportPathMap: async function (
-  //   defaultPathMap,
-  //   { dev, dir, outDir, distDir, buildId }
-  // ) {
-  //   return {
-  //     "/": { page: "/" },
-  //     "/auth/login": { page: "/auth/login" },
-  //     "/auth/register": { page: "/auth/register" },
-  //   };
-  // },
 
-  // // distDir: "../../dist/client",
-  // // output: "standalone",
+  trailingSlash: true,
+  exportTrailingSlash: true,
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      "/": { page: "/" },
+      "/auth/login": { page: "/auth/login" },
+      "/auth/register": { page: "/auth/register" },
+      "/admin/dashboard-admin": { page: "/admin/dashboard-admin" },
+    };
+  },
 
-  // // false for dev, true for product
-  // reactStrictMode: true,
-  // swcMinify: true,
-  // images: {
-  //   domains: ["s120-ava-talk.zadn.vn", "blob"],
-  //   },
-  // },
-});
+  // distDir: "../../dist/client",
+  // output: "standalone",
+
+  // false for dev, true for product
+  reactStrictMode: true,
+  swcMinify: true,
+  assetPrefix: "./",
+
+  images: {
+    unoptimized: true,
+    domains: ["s120-ava-talk.zadn.vn", "blob", "png", "ico", "jpg", "svg", "gif"],
+    path: "/",
+    loader: "imgix"
+  },
+},);
