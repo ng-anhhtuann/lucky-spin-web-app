@@ -16,7 +16,7 @@ export default function PopUp({ text, status, isWarning }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       close()
-    }, 1000)
+    }, 500)
     return () => { clearTimeout(timer) }
   }, [close])
 
