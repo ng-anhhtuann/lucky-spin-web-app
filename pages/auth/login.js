@@ -144,7 +144,7 @@ export default function Login() {
   const renderPassword = useMemo(() => {
     return (
       <Input
-        type="text"
+        type="password"
         isTextGradient={true}
         primaryColor={LEFT_COLOR}
         secondaryColor={
