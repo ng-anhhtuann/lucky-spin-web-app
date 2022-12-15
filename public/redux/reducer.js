@@ -9,7 +9,7 @@ import {
     USER_PACKAGE,
     USER_REWARD,
     REMOVE_STATE,
-    USER_CURR_HOSTING_EVENT,
+    USER_CURR_EVENT,
     USER_EVENT_CREATING,
     USER_REWARD_CREATING,
     USER_UPDATE_EVENT,
@@ -85,7 +85,7 @@ export const userReducer = (state = userState, action) => {
         case USER_REWARD: {
             return { ...state, reward: [...state.reward, ...action.payload] }
         }
-        case USER_CURR_HOSTING_EVENT: {
+        case USER_CURR_EVENT: {
             return { ...state, currEvent: action.payload }
         }
         case USER_EVENT_CREATING: {
