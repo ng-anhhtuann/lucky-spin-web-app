@@ -1,9 +1,7 @@
 /* eslint-disable no-unused-vars */
 import Auth from "layouts/Auth.js";
 import React, { useEffect, useCallback, useMemo, useState } from "react";
-import AuthInput from "public/shared/AuthInput";
 import TickBox from "public/shared/TickBox";
-import GradientLine from "public/shared/GradientLine";
 import LineWithText from "public/shared/LineWithText";
 import Title from "public/shared/Title";
 import AuthFooter from "public/shared/AuthFooter";
@@ -24,6 +22,7 @@ import { userPackage } from "public/redux/actions";
 import { usePopUpMessageHook, usePopUpStatusHook, usePopUpVisibleHook } from "public/redux/hooks";
 import Button from "public/shared/Button";
 import Input from "public/shared/Input";
+import Line from "public/shared/Line";
 
 export default function Login() {
   const message = usePopUpMessageHook();
@@ -184,11 +183,7 @@ export default function Login() {
 
   const renderFirstLine = useMemo(() => {
     return (
-      <LineWithText
-        text="hoặc"
-        leftColor={LEFT_GRADIENT}
-        rightColor={RIGHT_GRADIENT}
-      />
+      <Line content="hoặc"/>
     )
   }, [])
 
@@ -207,10 +202,7 @@ export default function Login() {
 
   const renderSecondLine = useMemo(() => {
     return (
-      <LineWithText
-        leftColor={LEFT_GRADIENT}
-        rightColor={RIGHT_GRADIENT}
-      />
+      <Line/>
     )
   }, [])
 

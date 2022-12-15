@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import { React, useCallback, useMemo, useState } from "react";
-import ConfirmButton from "public/shared/ConfirmButton";
 import {
   BG_WHITE,
   LEFT_COLOR,
@@ -8,10 +7,7 @@ import {
   FAIL_RIGHT_COLOR,
 } from "public/util/colors";
 import Title from "public/shared/Title";
-import AuthInput from "public/shared/AuthInput";
-import GradientLine from "public/shared/GradientLine";
 import AuthFooter from "public/shared/AuthFooter";
-import BgWhiteButton from "public/shared/BgWhiteButton";
 import Privacy from "public/shared/Privacy";
 import Auth from "layouts/Auth.js";
 import router from "next/router";
@@ -31,6 +27,7 @@ import { useDispatch } from "react-redux";
 import { usePopUpMessageHook, usePopUpStatusHook, usePopUpVisibleHook } from "public/redux/hooks";
 import Button from "public/shared/Button";
 import Input from "public/shared/Input";
+import Line from "public/shared/Line";
 
 const uuid = require("uuid");
 const dbRef = ref(db);
@@ -284,11 +281,7 @@ export default function Register() {
 
   const renderFirstLine = useMemo(() => {
     return (
-      <GradientLine
-        color1={LEFT_COLOR}
-        color2={RIGHT_COLOR}
-        content="hoặc"
-      />
+      <Line content="hoặc"/>
     )
   }, [])
 
@@ -309,7 +302,7 @@ export default function Register() {
 
   const renderSecondLine = useMemo(() => {
     return (
-      <GradientLine color1={LEFT_COLOR} color2={RIGHT_COLOR} />
+      <Line marginY={false}/>
     )
   }, [])
 

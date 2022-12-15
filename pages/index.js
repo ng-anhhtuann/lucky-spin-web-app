@@ -59,8 +59,8 @@ export default function Index() {
       setEvent(currEvent);
       ShowMethod(dispatch, messagesSuccess.I0008(currEvent.title), true);
       setTimeout(() => {
-        router.push("/event/info");
-      }, 1000);
+        router.push("/event/join");
+      }, 500);
     });
   }, [dispatch, event.createBy, pin]);
 
@@ -123,11 +123,7 @@ export default function Index() {
 
   const renderLine = useMemo(() => {
     return (
-      <LineWithText
-        text="hoặc"
-        leftColor={LEFT_GRADIENT}
-        rightColor={RIGHT_GRADIENT}
-      />
+      <Line content="hoặc" />
     )
   }, [])
 
