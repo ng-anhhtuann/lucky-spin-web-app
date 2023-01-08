@@ -1,6 +1,6 @@
 # AIT LUCKY APP
 
-This web-app is an Intern Project, which is created to organize or join events in the form of spinning the wheel of fortune participants'name.
+This web-app is an Web App Project, which is created to organize or join events in the form of spinning the wheel of fortune participants'name.
 
 ## Contributors
 Mentor: AIT-phuclq \
@@ -14,26 +14,8 @@ Members:
 - [Viresty](https://github.com/Viresty)
 - [vuphamngoctan1612](https://github.com/vuphamngoctan1612)
 
-## Installation
-Make sure you installed node
-```bash
-git clone https://github.com/AureoleIT/ait-lucky-app.git
-```
-then
-```bash
-npm install
-```
-To run this project: 
-```bash
-npm run dev
-```
-or 
-```bash
-npm run d
-```
-Remember to install all the library required in `package.json` if there're some errors happened. \
-Enjoy the app at [http://localhost:3000/](http://localhost:3000/)
-
+Enjoy the app at local [http://localhost:3000/](http://localhost:3000/) \
+Hosting: [here](https://aureole-lucky-app.vercel.app/)
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
