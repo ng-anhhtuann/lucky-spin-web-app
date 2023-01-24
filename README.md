@@ -2,9 +2,7 @@
 
 This web-app is an Web App Project, which is created to organize or join events in the form of spinning the wheel of fortune participants'name.
 
-## Contributors
-Mentor: AIT-phuclq \
-Members: 
+## Contributors:
 - [ng-anhhtuann](https://github.com/ng-anhhtuann)
 - [CamThuy0212](https://github.com/CamThuy0212)
 - [dungdung7301](https://github.com/dungdung7301)
